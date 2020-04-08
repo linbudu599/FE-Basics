@@ -6,7 +6,10 @@
 
 ### JavaScript基础
 
+- 常用设计模式
+
 - 装箱 / 拆箱 & 类型转换
+- 常用位运算
 - 原型
   - _\_proto__与prototype
   - Object.prototype
@@ -41,7 +44,6 @@
 - 模块化
   - ES Modules与CommonJS差异
   - 对循环引用的处理
-
 - 其他
   - caller / callee
   - typeof 与 Instanceof 原理
@@ -55,45 +57,35 @@
 
 ### HTML&CSS
 
+- 语义化
+- SEO
+
 - DTD `<!DOCTYPE>`
 - W3C与WHATWG
 - Html5新增API
-
 - DOM/BOM API
 - 常见布局
-
 - 优先级
-
+- 伪类与伪元素
+- 预处理器与后处理器
 - 盒模型
-
 - CSS3动画
 
   - GPU加速原理
-
 - 定位
 
   - 文档流
 
   - sticky
-
 - src & href
-
 - Flex
-
 - Grid
-
 - Rem与em
-
 - Flexible.js思路
-
 - BFC / IFC
-
 - 水平 / 垂直 / 水平垂直居中
-
 - Prefix
-
 - reset与normalize.css
-
 - 移动端
 
   - 像素比
@@ -106,6 +98,8 @@
   - 1Px
 
 ### 基础手写/算法
+
+- ajax
 
 - bind / call / apply
 - debounce / throttle
@@ -242,6 +236,8 @@
 
 ### 浏览器
 
+- 跨域与跨站
+
 - 强缓存与协商缓存
 
   - 优先级
@@ -250,6 +246,10 @@
   - E-tag 与 Last-Modified
 
 - 从输入URL到页面呈现
+
+  - 页面渲染中的不良现象
+    - 白屏
+    - FOUC
 
   - 图层树 绘制指令 绘制列表
     - 显示提升
@@ -263,6 +263,11 @@
   - 阻塞
     - js & dom
     - css & js
+    - async & defer
+
+- 操作DOM为什么慢
+
+  - 互斥
 
 - cookie / session / token
 
@@ -272,7 +277,7 @@
   - cookie session_id
   - jwt机理
 
-- mainiest
+- 本地存储
 
 - service worker
 
@@ -286,6 +291,8 @@
   - IE的事件模型
   - 阻止事件与冒泡
   - addEventListener & useCapture
+
+- RESTFul规范
 
 - 跨域
 
@@ -357,9 +364,13 @@
   - RST包
 - TCP/UDP适用场景
   - QUIC协议
+  - 为什么DNS使用UDP
 - TCP拥塞控制
   - 慢启动 & 拥塞避免
   - 快速重传 & 快速恢复
+- 正向代理与反向代理
+- Get与Post区别
+  - 幂等性
 
 ## 进阶
 
