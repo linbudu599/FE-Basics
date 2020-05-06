@@ -37,10 +37,7 @@
   - 隐式丢失
   - 优先级
   - 箭头函数的this
-- 对象冻结
-  - freeze
-  - seal
-- Object.defineProperties() 与 descriptor
+- Object.defineProperties() 与 descriptor(修饰符)
 - 模块化
   - ES Modules与CommonJS差异
   - 对循环引用的处理
@@ -48,12 +45,10 @@
   - caller / callee
   - typeof 与 Instanceof 原理
     - tyoeof null? (机器码)
-  - 柯里化
-    - 尾递归
-  - 类数组
-  - isNaN 和 Number.isNaN
-  - Obejct.is()漏洞
-    - React 使用的 `shallowEqual()` 对其进行的增强
+  - 柯里化(尾递归)
+  - 类数组包含?
+  - isNaN 和 Number.isNaN区别
+  - Obejct.is() Polyfill
 
 ### HTML&CSS
 
@@ -90,9 +85,8 @@
 
   - 像素比
   - 检测横屏
-  - 图片模糊问题
-
-  - IOS橡皮筋问题
+  - 图片模糊问题(srcset)
+- IOS橡皮筋问题
   - 视口类型
   - Vw Vh
   - 1Px
@@ -119,22 +113,19 @@
 - ES6的Class实质, 与ES5继承异同?
 
   - Babel编译结果
-  - 为什么先`super()`?
+  - 为什么需要先调用`super()`?
 
 - Generator
 
   - 协程
   - yield
   - co模块
-  - Thunk函数
-
+  
 - Iterator
 
   - for...of
 
-- Symbol
-
-  - 常用的内置接口
+- Symbol类型使用
 
 - ES6 Module与CommonJS
 
@@ -191,17 +182,13 @@
   - exec
   - execFile
   - fork
-
-- npm install
+- npm install过程
 
   - dedupe
-
 - Buffer
-
 - Stream
-
+- 可读/可写/可读可写/可转换流
 - Node的适用场景及原因
-
 - V8内存管理
 
   - 新生代与老生代机制
@@ -209,14 +196,11 @@
   - 标记清除与标记整理
     - 触发点
   - 增量标记
-
 - Cluster & IPC
 
   - child_progress
   - 主从模式
-
 - Node异步I/O & 进程池 & Libuv
-
 - 事件循环
 
   - timer
@@ -227,12 +211,10 @@
   - check
   - close CB
   - 每一阶段均有的nextTick与microTask
-
 - Koa
 
   - vs Express?
-
-  - 中间件原理 与 洋葱模型
+- 中间件原理 与 洋葱模型(Koa-Compose模块)
 
 ### 浏览器
 
@@ -341,7 +323,7 @@
 - 事务及边界
 - 索引
 
-
+- ORM
 
 ### 网络
 
@@ -371,6 +353,7 @@
 - 正向代理与反向代理
 - Get与Post区别
   - 幂等性
+  - 安全性
 
 ## 进阶
 
@@ -378,11 +361,12 @@
 
 #### TypeScript
 
-- type & interface
+- type 与 interface 异同
 - 泛型
 - 工具类型
 - 类型守护
 - 装饰器 / IOC
+- public/protected/private
 
 #### Git
 
@@ -390,9 +374,6 @@
 - git rebase
 - git merge
 - git reset
-  - hard
-  - soft
-  - mixed
 - git revert
 
 #### Webpack & Parcel
@@ -414,7 +395,7 @@
 
 - Immutable.JS
 
-- 生命周期
+- 生命周期(标注x的为已经废弃)
 
   - WillMount x
   - render
@@ -445,11 +426,10 @@
 - Fiber
 
   - requestIdleCallback
-
-  - 机制
-
-  - reconciliation / commit
-
+- 机制
+  - reconciliation 阶段
+- commit 阶段
+  
 - Redux
 
   - 中间件原理
@@ -466,10 +446,12 @@
 
 - 与Vue的比较
 
-  - 约束 / 迎合
+  - 约束 / 迎合开发者
   - 思想
 
 #### Vue
+
+> 实际不止这些 但我不是主要写Vue的
 
 - MVVM原理
   - Observer
@@ -497,21 +479,27 @@
 - DOM BOM如何禁止访问的?
 - 生命周期
 - 性能优化
-- **vs PWA / H5 / Hybrid / 各种跨端方案**
+- **vs PWA / Hybrid / 各种跨端方案**
 
 ## 漫谈
 
 ### 测试
 
 - 单元测试
-- E2E
-- 混沌
+- 集成测试
+- 端到端测试(E2E)
+- 混沌测试
 
 ### 工程化
 
 - 错误监控
+  - Sentry原理
 - 性能优化
+  - Webpack
+  - http缓存
+  - 使用Performance API获取应用表现
 - 脚手架
+  - 如何自建脚手架
 - 埋点
   - SPA应用
   - Hybrid应用
@@ -532,11 +520,11 @@
 - 前端趋势
   - 智能化
   - 跨端
-    - 5G 物联网
+    - 5G 物联网带来的影响
     - Flutter 与 RN此类方案
     - 演进
   - 价值
-    - 向后端侵袭
+    - 向后端进发
     - 对业务更熟悉
 - 工程化
   - 模块化
