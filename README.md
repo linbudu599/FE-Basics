@@ -1,60 +1,78 @@
 # 2020前端基础知识
 
-> 适用于20/21届前端同学
+> 适用于有志大厂的前端同学，如果全部看下来的确挺痛苦的，但收获也会max。我不喜欢赌运气比如看面经看到看不懂的地方想着“我运气应该不会这么背面试官连这个都问”。
 
 ## 基础
 
 ### JavaScript基础
 
+> 建议每一条都烂熟于心
+
 - 常用设计模式
+  - 单例
+  - 策略
+  - 代理
+  - 装饰者
+  - 中介者
+  - 工厂
+  - 观察者
+  - 享元
+  - 迭代器
+  - 职责链
 
 - 装箱 / 拆箱 & 类型转换
 - 常用位运算
+  - 位运算在算法中也可以起到让人眼前一亮的作用，如`~~`
 - 原型
   - _\_proto__与prototype
-  - Object.prototype
-  - Function与Object
+  - 顶级原型
+  - Function与Object，鸡生蛋与蛋生鸡问题
+  - 原型链继承与类式继承的本质差异
+ 
 - 闭包
   - 实现
   - 应用
   - 原理
   - 经典问题(`setTimeout` `IIFE` `let`) 
 - 执行上下文 调用栈 作用域链
-  - 变量对象(VO)与活动对象(AO)
+  - 变量对象(VO)与活动对象(AO)，能把这个说清楚面试官应该就不会在这一块为难你了。同时印象分+++
 - 继承
   - 寄生组合式继承(组合+原型)
 - 事件循环
-  - 浏览器UI渲染与事件循环?
+  - 浏览器UI渲染与事件循环?（UI渲染属于哪种任务，它的执行时机？）
   - async与await
   - Promise/A+规范
-    - 立即resolved的Promise执行时机
+    - 立即resolved的Promise执行时机？
 - 垃圾收集
   - 标记清除
   - 引用计数
     - 循环引用如何处理?
+  - ES6的WeakSet与WeakMap
 - this
   - 作用 & 意义
   - 隐式丢失
   - 优先级
   - 箭头函数的this
-- Object.defineProperties() 与 descriptor(修饰符)
+- Object.defineProperties() 与 descriptor(修饰符，即可读可写可枚举及值)
 - 模块化
   - ES Modules与CommonJS差异
-  - 对循环引用的处理
+  - 二者对循环引用的处理
+  - 为什么Webpack要使用摇树优化需要将Babel编译结果设置为ES6?(提示: ESM的静态优化)
 - 其他
   - caller / callee
   - typeof 与 Instanceof 原理
     - tyoeof null? (机器码)
-  - 柯里化(尾递归)
-  - 类数组包含?
-  - isNaN 和 Number.isNaN区别
-  - Obejct.is() Polyfill
+  - 柯里化(尾递归优化) & 函数式编程
+  - 类数组
+  - isNaN() 和 Number.isNaN()
+  - Obejct.is() 的不符直觉的处理（扩展：React shouldComponentUpdate的ShalloEqual底层对Object.is进行了优化。）
 
 ### HTML&CSS
 
+> 这一块的话，我的个人想法是不需要准备的太细致，大概的知识点足矣。
+
 - 语义化
 - SEO
-
 - DTD `<!DOCTYPE>`
 - W3C与WHATWG
 - Html5新增API
@@ -67,6 +85,7 @@
 - CSS3动画
 
   - GPU加速原理
+  
 - 定位
 
   - 文档流
@@ -75,6 +94,7 @@
 - src & href
 - Flex
 - Grid
+- Flex Grid属性及其可取值
 - Rem与em
 - Flexible.js思路
 - BFC / IFC
@@ -93,7 +113,9 @@
 
 ### 基础手写/算法
 
-- ajax
+> 算法我就帮不上太多忙啦，以下这些，不仅要会基本实现，还要会各个方面的优化版本。
+
+- ajax axios（我有一个仓库是自己实现的axios的http部分，有兴趣的同学可以翻翻，ts-axios）
 
 - bind / call / apply
 - debounce / throttle
@@ -137,7 +159,9 @@
 
 - Async/Await 的原理
 
-- Decorator
+  - NodeJS 14.3.0版本实现的顶级await
+
+- Decorator，建议直接看ts的
 
 - Proxy
 
@@ -177,18 +201,18 @@
 ### Node
 
 - 优缺点 适用场景
-- Node创建子进程的方式
+- Node创建子进程的方式，这几种方式的底层，异同
   - spawn
   - exec
   - execFile
   - fork
 - npm install过程
 
-  - dedupe
+  - 版本冲突 与 dedupe
 - Buffer
 - Stream
-- 可读/可写/可读可写/可转换流
-- Node的适用场景及原因
+  - 可读/可写/可读可写/可转换流
+- Node的适用场景及原因（事件驱动 异步I/O blabla...）
 - V8内存管理
 
   - 新生代与老生代机制
@@ -259,27 +283,28 @@
   - cookie session_id
   - jwt机理
 
-- 本地存储
+- 本地存储（web storage）
 
-- service worker
+- service worker（随便了解一些即可）
 
 - requesAnimationFrame
 
-- requestIdleCallback
+- requestIdleCallback（可以在被问到React Fiber时提到）
 
 - 事件机制
 
   - 委托发生的阶段
   - IE的事件模型
   - 阻止事件与冒泡
-  - addEventListener & useCapture
+  - addEventListener 的第三个参数: useCapture
 
-- RESTFul规范
+- RESTFul规范（url 方法 请求头...）
 
 - 跨域
 
   - JSONP 原理
   - Nginx 原理
+    - Nginx配置！
   - CORS
     - Options预检
     - 简单 / 复杂 请求
@@ -290,6 +315,10 @@
   - hash
     - onHashChange
   - history
+    - go
+    - push
+    - replace
+    - React-router`<\Redirect>`的源码（推荐阅读）
     - pushState
     - replaceState
     - onPopState
@@ -308,8 +337,9 @@
   - 同源检测
     - origin
     - referer
+    - 伪造的可行性
   - axios的XSRF防御手段
-  - samesite
+  - samesite！
 
 - Fetch & XHR对比
 
@@ -323,7 +353,7 @@
 - 事务及边界
 - 索引
 
-- ORM
+- ORM的原理
 
 ### 网络
 
@@ -537,6 +567,7 @@
     - ...
   - 系统化
     - 微服务
+    - 微前端
     - Serverless
     - 中间层
     - ...
