@@ -1,7 +1,5 @@
 # 2020前端基础知识
 
-> 适用于有志大厂的前端同学，如果全部看下来的确挺痛苦的，但收获也会max。我不喜欢赌运气, 比如看面经看到看不懂的地方想着: “我运气应该不会这么背面试官连这个都问8”, 万一真问了呢?
-
 ## 基础
 
 ### JavaScript基础
@@ -10,12 +8,9 @@
 
 - 常用设计模式
   - 单例
-  - 代理
   - 装饰者
   - 中介者
-  - 工厂
   - 观察者
-  - 享元
   - 迭代器
   
 - 装箱 / 拆箱 & 类型转换
@@ -26,31 +21,30 @@
   
 - 原型
   - _\_proto__与prototype
-  - 顶级原型对象
+  - 顶级原型对象Object
   - Function与Object，鸡生蛋与蛋生鸡问题
-  - 原型链继承与类式继承的本质差异
-  - 二者的同名属性分别会如何起作用
+  - 原型链继承与类式继承的本质差异, 二者的同名属性分别会如何起作用?
   
 - 闭包
   - 实现 & 应用 & 原理
-  - 经典问题(`setTimeout` `IIFE(立即执行函数)` `let`) 
+  - 经典问题(`setTimeout` & `IIFE(立即执行函数)` & `let`) 
   
 - 执行上下文 调用栈 作用域链
   
   - 推荐阅读我的这篇博客 [搞懂执行上下文+闭包+AO/VO+作用域(链)]([https://linbudu.top/posts/2020/03/17/js%E5%9F%BA%E7%A1%80-%E9%83%A8%E5%88%86.html](https://linbudu.top/posts/2020/03/17/js基础-部分.html))
-  
   - 变量对象(VO)与活动对象(AO)，能把这个说清楚面试官应该就不会在这一块为难你了。同时印象分+++
   
 - 继承
   
   - 寄生组合式继承(组合+原型)
   
-- 事件循环
+- 异步 事件循环
   
   - 微任务 & 宏任务 ....
-  
   - 浏览器UI渲染与事件循环?（UI渲染属于哪种任务，它的执行时机？）
   - async与await在其中的处理
+  - 实现Promise
+  - 并行 顺序 中断 Promise
   - [Promise A+规范](https://segmentfault.com/a/1190000002452115)
     - 立即resolved的Promise执行时机
   
@@ -58,9 +52,9 @@
   - 标记清除
   - 引用计数
     - 循环引用如何处理?
-  - 引出 -> ES6的WeakSet与WeakMap产生的意义
+  - 引出 -> ES6的WeakSet与WeakMap
   
-- this
+- this指向
   - 作用 & 意义
   - 隐式丢失
   - 四种优先级
@@ -68,17 +62,23 @@
   
 - Object.defineProperty() 与 descriptor(修饰符，即可配置(**configurable**) 可写(**writable**) 可枚举(**enumerable**) 及值(**value**))
 
+  - 与 Proxy 差异, 为什么Vue3.0切换到Proxy?
+
 - 模块化
   - ES Modules与CommonJS差异
     - 语法 & 导入 & 导出 加载方式
-  - 二者对循环引用的处理
-  - 为什么Webpack要使用摇树优化, 需要将Babel编译结果设置为ES6?(提示: ESM的静态优化)
+    - 为什么不要使用export default
+  - **二者对循环引用的处理**
+  - 为什么Webpack要使用摇树优化, 需要将Babel编译结果设置为ES6?
   
 - 其他
+  
+  - call & bind & apply
+  
   - caller / callee
   - typeof 与 Instanceof 原理
     - tyoeof null? (机器码)
-  - 柯里化(尾递归优化) & 函数式编程
+  - 柯里化(**尾递归优化**) & 函数式编程
   - 类数组
   - isNaN() 和 Number.isNaN()
   - Obejct.is() 的不符直觉的处理（扩展：React的`ShallowEqual`底层对Object.is()进行了优化, 见[shallowEqual.js](https://github.com/facebook/react/blob/a9b035b0c2b8235405835beca0c4db2cc37f18d0/packages/shared/shallowEqual.js)）
@@ -88,16 +88,27 @@
 > 这一块的话，我的个人想法是不需要准备的太细致，大概的知识点足矣。
 
 - 语义化
+
 - SEO
+
 - DTD `<!DOCTYPE>`
+
 - W3C与WHATWG规范
+
 - Html5新增API
+
 - DOM/BOM API
+
 - 常见布局
+
 - 优先级
+
 - 伪类与伪元素
+
 - 预处理器与后处理器
+
 - 盒模型
+
 - CSS3动画
 
   - GPU加速原理
@@ -105,24 +116,29 @@
 - 定位
 
   - 文档流
-
+- 子绝父相 blabla...
   - sticky
+  
 - src & href 区别
-- Flex
-- Grid
-- Flex Grid属性及其可取值
-- Rem与em
-- Flexible.js思路
+
+- Flex 布局属性及其可取值
+
+- Rem与em -> 手淘的Flexible方案, 小程序与Rax的rpx方案
+
 - BFC / IFC
+
 - 水平 / 垂直 / 水平垂直居中
-- Prefix
-- reset与normalize.css
+
+- 预处理器与后处理器
+
+- reset与normalize.css, 推荐用哪个?
+
 - 移动端
 
   - 像素比
   - 检测横屏
   - 图片模糊问题(`srcset`, 自动选择符合像素比的图片)
-- IOS橡皮筋问题
+  
   - 视口类型
   - vw vh
   - 1Px
@@ -132,7 +148,6 @@
 > 算法我就帮不上太多忙啦，以下这些，不仅要会基本实现，还要会各个方面的优化版本。
 
 - 原生ajax axios（我有一个仓库是自己实现的axios的http部分，有兴趣的同学可以翻翻，[ts-axios](https://github.com/linbudu599/ts-axios)）
-
 - bind / call / apply
 - debounce / throttle
 - instanceof
@@ -145,10 +160,11 @@
   - 实现ES6 Class实质的继承
 - 冒泡 / 快排 / 选择 ...
 - 观察者与发布订阅模式
+- 刷刷leetcode吧...
 
 ### ES6
 
-- let const var
+- let const var 暂时性死区等
 
 - ES6的Class实质, 与ES5继承异同?
 
