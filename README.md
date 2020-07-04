@@ -15,6 +15,22 @@
   
 - 装箱 / 拆箱 & 类型转换
 
+- 数据类型判断
+
+  - typeof 底层机器码 对于对象不准确(都会显示object)
+
+    > typeof null 机器码000表示为对象 但null全零...
+
+  - instanceof 基于原型链的判断 可准确判断Array/Function/Object
+
+    > 对于基本数据类型不能准确判断
+    >
+    > 111 instanceof Number -> false 同样的还有"xx"和true, 因为字面量值不是实例, new Number() 才是
+
+  - constructor 同样可以理解为基于原型链, 但修改原型会使得结果不准确
+
+  - **Object.prototype.toString.call()**  最准确的判断? 可用于深拷贝中判断数据类型, 返回`"[object array]"`这种形式
+
 - 常用位运算
   
   - 位运算在算法中也可以起到让人眼前一亮的作用，如`~~undefined`
@@ -30,10 +46,11 @@
   - 经典问题(`setTimeout` & `IIFE(立即执行函数)` & `let`) 
   
 - 执行上下文 调用栈 作用域链
-  
-  - 推荐阅读我的这篇博客 [搞懂执行上下文+闭包+AO/VO+作用域(链)]([https://linbudu.top/posts/2020/03/17/js%E5%9F%BA%E7%A1%80-%E9%83%A8%E5%88%86.html](https://linbudu.top/posts/2020/03/17/js基础-部分.html))
-  - 变量对象(VO)与活动对象(AO)，能把这个说清楚面试官应该就不会在这一块为难你了。同时印象分+++
-  
+
+  > 推荐阅读我的这篇博客 [搞懂执行上下文+闭包+AO/VO+作用域(链)]([https://linbudu.top/posts/2020/03/17/js%E5%9F%BA%E7%A1%80-%E9%83%A8%E5%88%86.html](https://linbudu.top/posts/2020/03/17/js基础-部分.html))
+
+  - 变量对象(VO)与活动对象(AO)
+
 - 继承
   
   - 寄生组合式继承(组合+原型)
@@ -49,8 +66,11 @@
     - 立即resolved的Promise执行时机
   
 - 垃圾收集
-  - 标记清除
-  - 引用计数
+  
+  - 内存泄漏(如何使用Chrome检测)
+  
+  - 标记清除法
+  - 引用计数法
     - 循环引用如何处理?
   - 引出 -> ES6的WeakSet与WeakMap
   
@@ -188,6 +208,7 @@
   - 回调函数延迟绑定
   - 错误穿透
   - 状态机制
+  - all race allSettled
 
 - Async/Await 的原理
 
@@ -312,9 +333,9 @@
     - 令牌化->建树
     - 样式收集
   - 阻塞
-    - js & dom
-    - css & js
-    - async & defer
+    - 加载js 阻塞 dom
+    - css & js的加载
+    - 给js标签添加async & defer的作用
 
 - 操作DOM为什么慢?
 
@@ -439,6 +460,8 @@
 
 - type 与 interface 异同
 
+- Class增强
+
 - 类型编程
 
   > 推荐阅读俺的博客: [TypeScript 类型编程初探](https://linbudu.top/posts/2020/05/30/ts%E7%B1%BB%E5%9E%8B%E7%BC%96%E7%A8%8B%E5%88%9D%E6%8E%A2.html)
@@ -446,21 +469,31 @@
   - 泛型
   - 类型守卫 & is关键字 
 
-  - Partial -> 实现递归的Partial
+  - 实现工具类型
 
 - 装饰器 / IoC体系
 
-- **public / protected / private / static**
+- **public / protected / private / static**关键字
 
 #### Git
 
 - 暂存区 等基本概念
-
 - git fetch
 - **git rebase**
 - git merge
 - git reset
 - git revert
+
+## Babel
+
+- 工作阶段
+  - 解析 babylon
+  - 转化 babel-traverse
+  - 生成 babel-generator
+- babel-plugin
+- babel-preset
+- babel-polyfill
+- @babel/plugin-transform-runtime
 
 #### Webpack & Parcel
 
@@ -502,7 +535,7 @@
 
 #### React
 
-- Redux 与 Mobx 起码熟练一个8
+- 性能优化
 
 - 生命周期(标注**x**的为已经废弃)
 
@@ -519,7 +552,7 @@
   - getDerivedStateFromProps
   - getSnapshotBeforeUpdate
   - getDerivedStateFromError
-    - 在页面崩溃时, 与componentDidCatch如何搭配
+    - 在页面崩溃时, 与componentDidCatch如何搭配降级
 
 - 为什么要废弃掉这几个生命周期?
 
@@ -527,19 +560,24 @@
 
 - Hooks
 
-  - useEffect
   - useState
 
+  - useEffect
   - (可选, 有一定理解难度) forwardRef & useRef & useImperativeHandle
+  - useCallback
+  - useMemo
 
 - Fiber
 
-  - requestIdleCallback
-- 机制
-  - reconciliation 阶段
-- commit 阶段
-  
-- Redux
+  - reconciliation
+  - commit
+  - Concurrent模式
+    - Suspense
+    - useTransition
+
+- Redux 与 Mobx 起码熟练一个8
+
+  - 源码
 
   - 中间件原理
 
@@ -547,11 +585,8 @@
 
   - 原生事件->同步, 合成事件->异步, 为什么?
 
-- React实现的事件机制
-
-- V-Dom与Diff
-
-  - 时间复杂度
+- React的事件机制
+- V-Dom与Diff算法
 
 - 与Vue的比较
 
