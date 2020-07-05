@@ -96,3 +96,7 @@
   - 类数组
   - isNaN() 和 Number.isNaN()
   - Obejct.is() 的不符直觉的处理（扩展：React的`ShallowEqual`底层对Object.is()进行了优化, 见[shallowEqual.js](https://github.com/facebook/react/blob/a9b035b0c2b8235405835beca0c4db2cc37f18d0/packages/shared/shallowEqual.js)）
+  - 深浅拷贝
+    - ...运算符
+    - JSON.parse(JSON.stringify())
+    - 真-深拷贝

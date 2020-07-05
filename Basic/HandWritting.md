@@ -7,7 +7,8 @@
 - debounce / throttle
 - instanceof
 - 深浅拷贝
-- promise
+- Promise
+- Async & Await
 - lazy man(挺好玩的)
 - new
 - 用setTimeout实现setInterval, 为什么要这么做

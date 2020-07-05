@@ -51,3 +51,11 @@
   - vs Express: 异同点 & 各自优势
   - 中间件原理 与 洋葱模型(Koa-Compose模块)
   - 选择Koa与选择Express的考量权衡
+
+- 服务端渲染(SSR)
+  
+  - SEO
+  - 首次有效渲染
+  - **同构**
+  - 使用到的React API
+  - 数据注水 & 脱水
