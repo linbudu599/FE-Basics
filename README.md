@@ -191,15 +191,41 @@
 
 ### 业务场景
 
+- 页面优化
+  - 性能
+  - SSR
+  - OPR（离线预渲染）
 - 白屏问题排查
+  - IP地址
+  - 日志
+  - 路由
+  - 请求返回
 - 骨架屏
 - 超长列表
   - requesAnimationFrame
   - 虚拟列表
-- 埋点的原理
+- 埋点
+  - 部分埋点
+  - 可视化埋点
+  - 全埋点
+  - 设计埋点SDK
 - 扫码登陆
-- 大文件分片 / 完整性校验 / 断点续传 / 秒传 / 拖拽上传 / 粘贴上传
-
+  - 长连接
+- 文件上传
+  - <form> & multipart/form-data & POST
+  - [File MIME](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
+  - koa-body
+  - 进度监听 xhr.upload.onprogress
+  - 取消 xhr.abort()
+  - 预览 window.URL.createObjectURL
+  - 拖拽上传 dragover drop dragleave drop事件中e.dataTransfer.files
+  - 剪贴板上传 contenteditable paste事件 event.clipboardData(window.clipboardData) getAsFile 
+- 大文件上传
+  - Blob.prototype.slice() 文件块标志（时间戳/索引） 合并告知请求 服务端合并文件
+  - TCP并发控制
+  - 服务端stream + pipe
+- 断点续传
+  - spark-md5 contenthash webworker，本地保存已上传切片信息，重新上传时比对hash值
 
 
 ### 小程序
