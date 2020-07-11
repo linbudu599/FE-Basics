@@ -321,7 +321,14 @@
 
   - **Serverless 解决了什么问题...?**
 
-  - FaaS + BaaS
+  - FaaS
+    - 冷启动 & NodeJS 冷启动优势(V8 JIT)
+    - 即用即毁 & 常驻进程
+    - 触发器
+    - FaaS 分层: 容器 runtime 代码
+    - 横向 & 纵向缩扩容
+  - BaaS
+  - BFF & SFF
   - Midway-FaaS
   - 小程序云函数思路
 
@@ -330,9 +337,9 @@
   - 智能化 如 Imgcook
   - 跨端
     - 5G 物联网带来的影响
-    - Flutter / RN / Taro / Rax
-    - 演进?
-  - 自我定位与市场定位
+    - Flutter / RN / Taro / Rax / ...
+    - 演进
+  - 前端工程师的自我定位与市场定位
   - 技能深度 & 广度
 
 - 工程化
