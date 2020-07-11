@@ -1,0 +1,40 @@
+# 业务场景
+
+- 页面优化
+  - 重绘重排
+  - 首屏优化
+  - 缓存
+  - 构建体积
+  - SSR
+  - OPR（离线预渲染）
+- 白屏问题排查
+  - IP 地址
+  - 日志
+  - 路由
+  - 请求返回
+- 骨架屏
+- 超长列表
+  - requesAnimationFrame
+  - 虚拟列表
+- 埋点
+  - 部分埋点
+  - 可视化埋点
+  - 全埋点
+  - 设计埋点 SDK
+- 扫码登陆
+  - 长连接
+- 文件上传
+  - <\form> & multipart/form-data & POST
+  - [File MIME](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
+  - koa-body
+  - 进度监听 xhr.upload.onprogress
+  - 取消 xhr.abort()
+  - 预览 window.URL.createObjectURL
+  - 拖拽上传 dragover drop dragleave drop 事件中 e.dataTransfer.files
+  - 剪贴板上传 contenteditable paste 事件 event.clipboardData(window.clipboardData) getAsFile
+- 大文件上传
+  - Blob.prototype.slice() 文件块标志（时间戳/索引） 合并告知请求 服务端合并文件
+  - TCP 并发控制
+  - 服务端 stream + pipe
+- 断点续传
+  - spark-md5 contenthash webworker，本地保存已上传切片信息，重新上传时比对 hash 值
