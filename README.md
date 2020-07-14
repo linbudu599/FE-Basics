@@ -20,6 +20,17 @@
 
 ## 进阶
 
+### 性能优化
+
+- **First Pain**: 首次绘制，即页面第一次绘制像素的时间，越快越好
+- **First Contentful Paint**: 页面第一次绘制文本/图片等非空元素的时间，越快越好
+- **Largest Contentful Paint**: 视窗内最大元素绘制时间，会随着渲染过程变化（大元素可能会发生改变），会在用户第一次交互后停止记录。官方推荐在**2.5s**内为优秀，**2.5s-4s**为需要改进，比FP与FCP更能体现用户页面体验。
+- **Time to Interactive**: 首次可交互时间，重要指标，代表页面进入真正可用状态。
+- **First Input Delay**: 首次输入延迟， FCP与TTI之间用户首次与页面交互时3的响应延迟。
+- **Cumalative Layout Shift**: 页面非预期位移波动，如影响体验的大块内容插入。
+- 基于[Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)获取指标
+- 资源大小及加载速度&网络速度：FP FCP LCP
+
 ### [TypeScript](./Advanced/Ts.md)
 
 ### Git
