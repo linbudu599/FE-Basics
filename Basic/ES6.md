@@ -26,10 +26,14 @@
 
 - Promise
 
+  - Promise/A+
+
   - 回调函数延迟绑定
+  - 链式调用
   - 错误穿透
   - 状态机制
-  - all race allSettled
+  - all race allSettled 实现
+  - 实现并发限制Promise
 
 - Async/Await 的原理
 

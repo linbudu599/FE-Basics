@@ -1,5 +1,26 @@
 # 漫谈
 
+## 跨端
+
+- 运行时跨端 与 编译时跨端
+
+- Remax Kbone Taro Rax...
+
+- Taro原理
+  - 运行时标准
+  - XML类(小程序/H5)与JSX类(RN等)
+  - 生命周期与事件处理函数
+  - 异步API Promise化
+  
+- RN & Weex 生成虚拟DOM，并调用原生控件进行渲染（编译为），即JS调用Native组件
+
+- Flutter 
+
+  - 底层是Skia(2D跨平台绘图引擎库), 安卓自带Skia
+  - 
+
+  - Why Dart Yes? 性能 Fuchsia 类型安全 安卓上有V8提供Native Binding，但IOS上JSCore就没那么容易了。由Dart可以很好实现Native Binding
+
 ## 测试
 
 - 单元测试

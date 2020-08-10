@@ -1,5 +1,23 @@
 # Node
 
+- Node架构：标准库 - Node Bindings - V8 & Libuv & C-ares & http_parser & zlib...
+
+- GC
+
+  - 标记清除：全部标记 - 清除运行及被运行引用 - 清除带有标记的
+  - 引用计数  循环引用
+
+  - 新生代: Scavenge算法，From空间 To空间
+  - 对象晋升到老生代条件
+
+  - 老生代
+
+  	- 标记-清除
+
+  	- 标记整理
+
+  	- 增量标记
+
 - 优缺点 适用场景
   - Nginx也是事件驱动
 - 进程 & 线程，单线程
@@ -60,6 +78,7 @@
   - vs Express: 异同点 & 各自优势
   - 中间件原理 与 洋葱模型(Koa-Compose模块)
   - 选择Koa与选择Express的考量权衡
+  - Koa中间件 & Express 中间件
 - 服务端渲染(SSR)
 
   - SEO

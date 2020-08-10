@@ -31,10 +31,14 @@
   - 位运算在算法中也可以起到让人眼前一亮的作用，如`~~undefined`
   
 - 原型
+  
+  - 原型链的设计初衷
+  
   - _\_proto__与prototype
   - 顶级原型对象Object
   - Function与Object，鸡生蛋与蛋生鸡问题
   - 原型链继承与类式继承的本质差异, 二者的同名属性分别会如何起作用?
+  - ES6的Class 与原型链的关系(静态成员 & 实例成员)
   
 - 闭包
   - 实现 & 应用 & 原理
@@ -87,6 +91,8 @@
   - 为什么Webpack要使用摇树优化, 需要将Babel编译结果设置为ES6?
   
 - 其他
+  
+  - new操作进行的步骤
   
   - call & bind & apply
   - caller / callee

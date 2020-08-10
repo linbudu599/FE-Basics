@@ -15,7 +15,9 @@
 - DOM/BOM API
 
 - 常见布局
-
+  - Flex
+  - Grid
+  
 - 优先级
 
 - 伪类与伪元素
@@ -31,14 +33,25 @@
 - 定位
 
   - 文档流
+  
 - 子绝父相 blabla...
+
+- position
+  
+  - 文档流 相对位置
+  
+  - relative
+  - absolute
+  - static
   - sticky
   
 - src & href 区别
 
+- 伪类与伪元素
+
 - Flex 布局属性及其可取值
 
-- Rem与em -> 手淘的Flexible方案, 小程序与Rax的rpx方案
+- rem & em & px-> 手淘的Flexible方案, 小程序与Rax的rpx方案
 
 - BFC / IFC
 
@@ -46,7 +59,7 @@
 
 - 预处理器与后处理器
 
-- reset与normalize.css, 推荐用哪个?
+- reset与normalize.css
 
 - 移动端
 
