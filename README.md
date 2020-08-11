@@ -33,3 +33,9 @@
 ### [小程序](./Advanced/Mini-Program.md)
 
 ## [漫谈](./Advanced/Wonder.md)
+
+## 巨佬博客链接
+
+- [粥里有勺糖](https://www.sugarat.top/)
+
+
