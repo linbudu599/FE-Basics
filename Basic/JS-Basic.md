@@ -59,7 +59,7 @@
   - 微任务 & 宏任务 ....
   - 浏览器UI渲染与事件循环?（UI渲染属于哪种任务，它的执行时机？）
   - async与await在其中的处理
-  - 实现Promise
+  - 实现Promise(race/all/abort...)
   - 并行 顺序 中断 Promise
   - [Promise A+规范](https://segmentfault.com/a/1190000002452115)
     - 立即resolved的Promise执行时机

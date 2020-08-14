@@ -49,10 +49,10 @@
   - 链式调用
   - 错误穿透
   - 状态机制
-  - all race allSettled 实现
+  - all race allSettled 及实现
   - 实现并发限制Promise
   - finally()
-  - all() race() allSettled()
+  - 有一个抛错的promise 在.all中获得正确结果
 
 - Async/Await 的原理
 

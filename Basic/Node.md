@@ -40,10 +40,12 @@
     - execFile
     - fork
 - `child_process`与`cluster`: 多进程模型，以多进程的方式模拟多线程
+  
   - `worker_threads`: 真·多线程
 - 多进程：需要IPC，CPU利用率低（切换复杂），编码与调试方便，进程独立。
-  - 多线程：利用率高，编码调试复杂，线程影响。
-
+  
+- 多线程：利用率高，编码调试复杂，线程影响。
+  
 - `exports` 与 `module.exports`
 
 - npm install过程
@@ -113,13 +115,8 @@
   - vs Express: 异同点 & 各自优势
   - 中间件原理 与 洋葱模型(Koa-Compose模块)
   - 选择Koa与选择Express的考量权衡
-<<<<<<< HEAD
-  - Koa中间件 & Express 中间件
-=======
-  - Egg / Midway
-    - Egg-Cluster
-  
->>>>>>> 31a5d64e8a1aace368382a9d28619ae7764133fc
+
+
 - 服务端渲染(SSR)
 
   - SEO
