@@ -37,5 +37,5 @@
 ## 巨佬博客链接
 
 - [粥里有勺糖](https://www.sugarat.top/)
-
-
+- [艾浩的个人博客](https://sherrybabyone.github.io/)
+- [2NaCl的Java校招面试点总结](https://blog.csdn.net/qq_41936805)
