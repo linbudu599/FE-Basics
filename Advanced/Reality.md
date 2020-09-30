@@ -22,9 +22,10 @@
   - 全埋点
   - 设计埋点 SDK
 - 扫码登陆
+  
   - 长连接
 - 文件上传
-  - <\form> & multipart/form-data & POST
+  - <form /\> & multipart/form-data & POST
   - [File MIME](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
   - koa-body
   - 进度监听 xhr.upload.onprogress
@@ -37,4 +38,5 @@
   - TCP 并发控制
   - 服务端 stream + pipe
 - 断点续传
+  
   - spark-md5 contenthash webworker，本地保存已上传切片信息，重新上传时比对 hash 值

@@ -13,6 +13,7 @@
   - 递归解析处理依赖, 生成chunk, 拼接文件
   - 过程中plugin会在tapable的钩子上被调用
 
+- Plugin生命周期
 - Parcel 构建流程
 
   - @parcel/transformer-xxx

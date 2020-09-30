@@ -9,3 +9,5 @@
   - 应用级
 - 性能优化
 - vs PWA / Hybrid / RN / Flutter ...
+- setState为何表现为数据更新同步UI更新异步?
+- 小程序中的鉴权

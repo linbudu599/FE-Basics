@@ -10,6 +10,10 @@
 - git revert
 - git branch 相关
 - Git Flow 工作流
+- 场景
+  - 回退
+  - 分支
+  - 清除已提交到暂存区/本地仓库的记录
 
 ### Babel
 
@@ -20,4 +24,5 @@
 - babel-plugin
 - babel-preset
 - babel-polyfill
-- @babel/plugin-transform-runtime
+- @babel/plugin-transform-runtime\
+- AST相关
