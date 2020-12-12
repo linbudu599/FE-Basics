@@ -13,19 +13,13 @@
 - 数据类型判断
 
   - typeof 基于底层机器码的判断 对于对象不准确(都会显示object)
-
-    > `typeof null`:  机器码000表示为对象 但null全零
-
+- typeof
   - instanceof 基于原型链的判断 可准确判断Array/Function/Object
-
-    > 对于基本数据类型不能准确判断
-    >
-    > 111 instanceof Number -> false 同样的还有"xx"和true, 因为字面量值不是实例, new Number() 才是
-
-  - constructor 同样可以理解为基于原型链, 但修改原型会使得结果不准确
-
-  - **Object.prototype.toString.call()**  最准确的判断? 可用于深拷贝中判断数据类型, 返回`"[object array]"`这种形式
-
+- 对于基本数据类型?
+    - 111 instanceof Number -> false 字面量值(111) 与 实例(new Number())的不同
+- constructor 同样可以理解为基于原型链, 但修改原型会使得结果不准确
+  - **Object.prototype.toString.call()**  最准确的判断 可用于深拷贝中判断数据类型, 返回`"[object array]"`这种形式
+  
 - 常用位运算
   
   - 位运算在算法中也可以起到让人眼前一亮的作用，如`~~undefined -> 0`
@@ -50,7 +44,7 @@
   
 - 闭包
   - 实现 & 应用 & 原理
-  - 经典问题(你懂的)
+  - 经典问题 setTimeout + for循环
   - 尝试使用一句话通俗的讲清闭包概念
   
 - 执行上下文
@@ -71,13 +65,14 @@
   - 微任务 & 宏任务
   - 浏览器UI渲染与事件循环?（UI渲染属于哪种任务，它的执行时机？）
   - async与await在其中的处理
+  - 可扩展至NodeJS的事件循环
   
 - Promise
   
-  - 实现Promise(race/all(并发限制)/abort/allSettled...)
+  - 实现Promise(race/all(并发限制版)/abort/allSettled...)
   - 并行 顺序 中断 Promise
   - [Promise A+规范](https://segmentfault.com/a/1190000002452115)
-    - 立即resolved的Promise执行时机
+    - 立即resolved的Promise执行时机 >>> 事件循环
   
 - 垃圾收集
   
@@ -86,7 +81,7 @@
   - 标记清除
   - 引用计数
     - 循环引用如何处理?
-  - 扩展 -> ES6的WeakSet与WeakMap
+  - 扩展 -> ES6的WeakSet与WeakMap设计原因
   
 - this指向
   - 作用 & 意义
@@ -96,13 +91,14 @@
   
 - Object.defineProperty() 与 descriptor(修饰符，即可配置(**configurable**) 可写(**writable**) 可枚举(**enumerable**) 及值(**value**))
 
-  - 与 Proxy 差异, 为什么Vue3.0切换到Proxy?
+  - 与 Proxy 差异, 为什么Vue3.0切换到Proxy? 这解决了Vue2.x的哪些问题?
 
 - 模块化
+  
+  - AMD UMD ...
   - ES Module与CommonJS差异
     - 语法 & 导入 & 导出 & 加载方式
-    - 为什么不要使用export default
-    - 混用
+    - export default可能存在的问题
   - **二者对循环引用的处理**
   - 为什么Webpack使用摇树优化, 需要将Babel编译结果设置为ES6?
   

@@ -17,6 +17,7 @@
   	- 标记整理
 
   	- 增量标记
+  
 - 架构
   - Node标准库（JS）
   - Node Binding(C++)
@@ -39,13 +40,11 @@
     - exec
     - execFile
     - fork
-- `child_process`与`cluster`: 多进程模型，以多进程的方式模拟多线程
   
-  - `worker_threads`: 真·多线程
-- 多进程：需要IPC，CPU利用率低（切换复杂），编码与调试方便，进程独立。
-  
-- 多线程：利用率高，编码调试复杂，线程影响。
-  
+- `child_process`与`cluster`: 多进程
+
+- worker_threads`: 多线程
+
 - `exports` 与 `module.exports`
 
 - npm install过程
@@ -97,7 +96,7 @@
   - child_progress
   - 主从模式
   
-- Node异步I/O & 进程池 & Libuv
+- Node异步I/O & Libuv工作线程池: Libuv是如何赋予NodeJS高并发能力的?
 
 - 事件循环
 
@@ -122,6 +121,5 @@
   - SEO
   - 首次有效渲染
   - **同构**
-  - 使用到的React API
   - 数据注水 & 脱水
 

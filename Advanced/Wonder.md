@@ -17,8 +17,6 @@
 - Flutter 
 
   - 底层是Skia(2D跨平台绘图引擎库), 安卓自带Skia
-  - 
-
   - Why Dart Yes? 性能 Fuchsia 类型安全 安卓上有V8提供Native Binding，但IOS上JSCore就没那么容易了。由Dart可以很好实现Native Binding
 
 ## 测试
@@ -52,8 +50,9 @@
 
   - 如何自建脚手架? -> yeoman
   - 自建脚手架的思路, 类似 Feflow
+  - Vue-CLI 思路
 
-- (可选) GraphQL & BFF & Apollo
+- GraphQL & BFF & Apollo
 
   - vs RESTFul 优劣势
   - BFF 意义, 解决了什么问题?
@@ -108,3 +107,10 @@
     - Serverless
     - BFF 中间层
     - ...
+
+## 新趋势
+
+下一代前端思路? Maybe
+
+- Svelte 和 Sapper
+- Midway-Hooks & RedwoodJS & BlitzJS: 前后端一体化开发  构建时分离

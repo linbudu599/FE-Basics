@@ -11,6 +11,8 @@
 - 类型编程
 
   > 推荐阅读: [TypeScript 类型编程初探](https://linbudu.top/posts/2020/05/30/ts%E7%B1%BB%E5%9E%8B%E7%BC%96%E7%A8%8B%E5%88%9D%E6%8E%A2.html)
+  >
+  > 深入点: [TypeScript的另一面: 类型编程](https://linbudu.top/posts/2020/10/19/typescript%E7%B1%BB%E5%9E%8B%E7%BC%96%E7%A8%8B.html)
 
   - 泛型
   - 条件类型
